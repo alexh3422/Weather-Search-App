@@ -13,9 +13,12 @@
 <body>
   <main>
         <div id="search">
-            <form action="submit" id="city-input">
-                <input type="text" name="city" placeholder="Enter City Name">
-                <button type="submit">Search</button>
+            <form id="searchForm">
+                <label for="query"></label>
+                <input type="text" id="query" name="query" placeholder="Enter City Name Here">
+                <input id="searchBtn" type="submit" value="Search">
+              </form>   
+            
         </div>
         <div class="current-container">
             <div class="weather">
@@ -51,6 +54,9 @@
                 </div>
             </div>
         </div>
+        <div id="search-history">
+            <h2>Search History</h2>
+            <ul id="history-list"></ul>
     
 </body>
 <script src="./assets/js/script.js"></script>
