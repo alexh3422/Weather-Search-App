@@ -3,7 +3,7 @@ search.addEventListener('submit', function(e) {
     const citySearch = document.getElementById('query').value;
     const API_KEY = '936813a4181da5148d9c73c2b2fe7ccc'
     const url2 = `https://api.openweathermap.org/data/2.5/weather?q=${citySearch}&appid=${API_KEY}&units=imperial`;
-  
+    
     fetch(url2)
       .then(response => response.json())
       .then(data => {
@@ -36,25 +36,63 @@ search.addEventListener('submit', function(e) {
         document.getElementById('humidity').textContent =
           'Humidity: ' + humidity + '%';
 
+
+
+          function saveSearch() {
+            
+            localStorage.setItem("search", citySearch);
+            // console.log(citySearch);
+        
+            var searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
+            searchHistory.push(citySearch);
+            localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+            // console.log(searchHistory);
+            }
+
+          
+            
+            
+
+
+          saveSearch();
+
+          function displaySearchHistory() {
+            let searchHistory = JSON.parse(localStorage.getItem('searchHistory') || '[]');
+            let container = document.getElementById('history-list');
+            // Clear the container element
+            container.innerHTML = '';
+            // Create a button for each search in the search history
+            for (let i = 0; i < searchHistory.length; i++) {
+              let search = searchHistory[i];
+              let button = document.createElement('button');
+              button.textContent = search;
+              container.appendChild(button);
+            }
+          }
+
+          displaySearchHistory();
+
+
+
+         
+
    
 
       });
     });
 
-    $("#searchBtn").on("click", function() {
-        saveSearch();
-  
-  function saveSearch() {
-    var searchValue = $("#query").val();
-    localStorage.setItem("search", searchValue);
-    console.log(searchValue);
 
-    var searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
-    searchHistory.push(searchValue);
-    localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
-    console.log(searchHistory);
-    }
-    });
+    // const url5day = 'api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}'
+    // fetch(url5day)
+    // .then(response => response.json())
+    // .then(data => {
+
+
+
+
+
+
+ 
 
 
 

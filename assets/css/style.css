@@ -1,5 +1,8 @@
 * {
     font-family: monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .header {
@@ -16,6 +19,7 @@
     top: 0;
     width: 90%;
     margin-bottom: 50px;
+  
 }
 
 #search {
@@ -42,10 +46,31 @@
     width: 90vw;
 }
 
+#searchHistory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
 .location {
     padding: 40px;
 }
 
 .weather {
     padding: 40px;
+}
+
+.fiveDay {
+    border: 5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin: 20px;
+    width: 90vw;
 }
