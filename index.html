@@ -20,12 +20,16 @@
               </form>   
             
         </div>
-        <div class="current-container">
+        <div class="current-container hidden" id="current">
+            <h2>Current Weather:</h2>
             <div class="weather">
                 <div class="weather__icon">
                     <img id="weathericon" alt="current weather displayed as icon" width="100" height="100"></img>
                 </div>
                 <div class="weather__info">
+                    <div class="weather__info__time" id="time">
+                        <span class="time"></span>
+                    </div> 
                     <div class="weather__info__desc" id="weather">
                         <span class="desc"></span>
                     </div>
@@ -37,12 +41,16 @@
                         <span class="temp"></span>
                         <span class="temp__unit"></span>
                     </div>
+                    <div class="weather__info__temp" id="wind">
+                        <span class="windSpeed"></span>
+                        <span class="temp__unit"></span>
+                    </div>
                    
                 </div>
             </div>
             <div class="location">
                 <div class="location__icon">
-                    <img src="./assets/images/location.png" width="100" height="100" alt="location">
+                    <img src="./assets/images/location.png" width="90" height="90" alt="location">
                 </div>
                 <div class="location__info">
                     <div class="location__info__city" id="city">
@@ -54,35 +62,55 @@
                 </div>
             </div>  
         </div>
-        <div class="fiveDay">
-            <div class="day1">
-                <img class="icon1"></img>
-                <div class="temp1"></div>
-            </div>
-            <div class="day2">
-                <img class="icon2"></img>
-                <div class="temp2"></div>
-            </div>
+        <div class="fiveDayForecastContainer">
+         <h2>5 Day Forecast</h2>
+         <div id="fiveDay">
+           <div class="forecast-card" id="day1">
+            <p class="date5">1</p>
+            <p class="temp5">1</p>
+            <p class="wind5">1</p>
+            <p class="humidity5">1</p>
+            <img class="icon5"></img> 
+           </div>
+           <div class="forecast-card" id="day2">
+            <p class="date5">1</p>
+            <p class="temp5">1</p>
+            <p class="wind5">1</p>
+            <p class="humidity5">1</p>
+            <img class="icon5"></img> 
+           </div>
+           <div class="forecast-card" id="day3">
+            <p class="date5">1</p>
+            <p class="temp5">1</p>
+            <p class="wind5">1</p>
+            <p class="humidity5">1</p>
+            <img class="icon5"></img> 
+           </div>
+           <div class="forecast-card" id="day4">
+            <p class="date5">1</p>
+            <p class="temp5">1</p>
+            <p class="wind5">1</p>
+            <p class="humidity5">1</p>
+            <img class="icon5"></img> 
+           </div>
+           <div class="forecast-card" id="day5">
+            <p class="date5">1</p>
+            <p class="temp5">1</p>
+            <p class="wind5">1</p>
+            <p class="humidity5">1</p>
+            <img class="icon5"></img> 
+           </div>
 
-            <div class="day3">
-                <img class="icon3"></img>
-                <div class="temp3"></div>
-            </div>
-            <div class="day4">
-                <img class="icon4"></img>
-                <div class="temp4"></div>
-            </div>
-            <div class="day5">
-                <img class="icon5"></img>
-                <div id="temp5"></div>
-            </div>
+        </div>
         </div>
         <div id="search-history">
             <h2>Search History</h2>
-            <div id="history-list">
-
-            </div>
+            <span id="history-list"></span> 
+        </div> 
     
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+<script>dayjs().format()</script>
 <script src="./assets/js/script.js"></script>
 </html>

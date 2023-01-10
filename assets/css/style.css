@@ -22,6 +22,10 @@
   
 }
 
+#city {
+    font-size: 26px;
+}
+
 #search {
     display: flex;
     justify-content: center;
@@ -44,6 +48,7 @@
     padding: 10px;
     margin: 20px;
     width: 90vw;
+    font-size: 20px;
 }
 
 #searchHistory {
@@ -62,7 +67,7 @@
     padding: 40px;
 }
 
-.fiveDay {
+.fiveDayForecastContainer {
     border: 5px solid black;
     display: flex;
     justify-content: center;
@@ -74,3 +79,27 @@
     margin: 20px;
     width: 90vw;
 }
+
+#history-list button {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(8, 59, 153);
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.forecast-card {
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(8, 59, 153);
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* .hidden {
+    display: none;
+} */
