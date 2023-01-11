@@ -5,22 +5,29 @@
     box-sizing: border-box;
 }
 
+:root {
+    scroll-behavior: smooth;
+  }
+
 .header {
     display: flex;
     justify-content: center;
-    align-items: center;
+  
     color: white;
     font-size: 32px;    
-    background-color: rgb(8, 59, 153);
+  
     padding: 20px;
     margin: 0;
     left: 0;
     right: 0;
     top: 0;
-    width: 90%;
-    margin-bottom: 50px;
+    /* width: 90%; */
+    /* margin-bottom: px; */
+    background-color: #1e3f20ff;
   
 }
+
+
 
 #city {
     font-size: 26px;
@@ -43,12 +50,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    /* width: 100%; */
+    color: white;
     height: 100%;
     padding: 10px;
     margin: 20px;
-    width: 90vw;
+  
     font-size: 20px;
+    background-color: #345830ff;
 }
 
 #searchHistory {
@@ -70,16 +78,20 @@
 .fiveDayForecastContainer {
     border: 5px solid black;
     display: flex;
-    flex-direction: row;
-
-    justify-content: center;
-    
+    flex-direction: column;
+    justify-content: space-between;
   
-    width: 100%;
     height: 100%;
     padding: 10px;
-    margin: 20px;
-    width: 90vw;
+    margin: 10px;
+    background-color: #345830ff;
+
+}
+.fiveDayForecastContainer h2 {
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
+    color:white;
 }
 
 #history-list button {
@@ -94,18 +106,50 @@
 
 .forecast-card {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     border: 2px solid black;
     margin: 10px;
     padding: 10px;
-    background-color: rgb(8, 59, 153);
+    background-color: #1e3f20ff;
     color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    
+}
+
+
+#search-history {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    background-color: #1e3f20ff;
+    
     border-radius: 5px;
     font-size: 16px;
 }
 
-/* .hidden {
+#search-history button {
+    margin: 10px;
+    padding: 10px;
+    background-color: #1a1f16ff;;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#search-history h2 {
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
+    color:white
+}
+
+.hidden {
     display: none;
-} */
+}

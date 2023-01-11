@@ -1,24 +1,22 @@
 const API_KEY = '936813a4181da5148d9c73c2b2fe7ccc'
 loadHistory();
 function displayWeatherForecast() {
-  //alert('in displayWeatherForecast')
+  document.getElementById("current").classList.remove("hidden");
+  document.getElementById("forecastfiveday").classList.remove("hidden");
+
   const citySearch = document.getElementById('cityQuery').value;
   const citySearchUrl = `https://api.openweathermap.org/data/2.5/weather?q=${citySearch}&appid=${API_KEY}&units=imperial`;
   
   fetch(citySearchUrl).then(response => response.json())
   .then(data => {
-    // console.log (data)
+    
     lat = data.coord.lat; 
     lon = data.coord.lon;
 console.log(citySearch)
     const latLonUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${API_KEY}`;
     fetch(latLonUrl).then(response => response.json())
     .then(data => {
-      console.log (data )
-
       // current weather
-    
-
       const temp = data.main.temp;
       const weather = data.weather[0].main;
       const city = data.name;
@@ -73,12 +71,7 @@ console.log(citySearch)
     citySearchButton.classList.add('btn', 'btn-primary', 'btn-block', 'citySearchButton');
     document.getElementById('history-list').appendChild(citySearchButton);
     citySearchButton.addEventListener('click', savedCitySearch)
-    //citySearchButton.addEventListener('click', function(e) {
-    //  e.preventDefault();
-    //  document.getElementById('cityQuery').value = e.target.textContent
-    //  document.getElementById('cityQuery').submit()
-    //})
-
+  
     citySearchList.push(citySearch);
     localStorage.setItem('citySearchList', JSON.stringify(citySearchList));
  }
