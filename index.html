@@ -15,7 +15,7 @@
         <div id="search">
             <form id="searchForm">
                 <label for="query"></label>
-                <input type="text" id="query" name="query" placeholder="Enter City Name Here">
+                <input type="text" id="cityQuery" name="query" placeholder="Enter City Name Here">
                 <input id="searchBtn" type="submit" value="Search">
               </form>   
             
@@ -27,8 +27,8 @@
                     <img id="weathericon" alt="current weather displayed as icon" width="100" height="100"></img>
                 </div>
                 <div class="weather__info">
-                    <div class="weather__info__time" id="time">
-                        <span class="time"></span>
+                    <div class="weather__info__time">
+                     <p id="time"></p>
                     </div> 
                     <div class="weather__info__desc" id="weather">
                         <span class="desc"></span>
@@ -107,7 +107,7 @@
         </div>
         <div id="search-history">
             <h2>Search History</h2>
-            <span id="history-list"></span> 
+            <div id="history-list"></div> 
         </div> 
     
 </body>
