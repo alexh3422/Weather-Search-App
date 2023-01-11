@@ -39,48 +39,6 @@ search.addEventListener('submit', function(e) {
           'Humidity: ' + humidity + '%';
         document.getElementById('wind').textContent = 'Wind: ' + wind + 'mph';
 
-
-
-          function saveSearch() {
-            
-            localStorage.setItem("search", citySearch);
-          
-        
-            var searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
-            searchHistory.push(citySearch);
-            localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
-
-    }
-
-          
-            
-            
-
-
-          saveSearch();
-
-          function displaySearchHistory() {
-            let searchHistory = JSON.parse(localStorage.getItem('searchHistory') || '[]');
-            let container = document.querySelector('#history-list');
-            // Clear the container element
-            container.innerHTML = '';
-            // Create a button for each search in the search history
-            for (let i = 0; i < searchHistory.length; i++) {
-              let search = searchHistory[i];
-              let button = document.createElement('button');
-              button.textContent = search;
-              button.addEventListener('click', function() {
-                // set the citySearch5 to the city of the button clicked
-                citySearch5 = this.textContent;
-                weatherForecast()
-              });
-              container.appendChild(button);
-            }
-          }
-
-          displaySearchHistory();
-
-
 const API_KEY = '936813a4181da5148d9c73c2b2fe7ccc';
 const citySearch5 = document.getElementById('query').value;
 
@@ -107,25 +65,24 @@ fetch(url5)
           document.querySelectorAll('.tempFive')[j].textContent = tempEl
           document.querySelectorAll('.windFive')[j].textContent = windEl;
           document.querySelectorAll('.humidityFive')[j].textContent = humidityEl;
-      // }
-
+    
   }
-
-
   })
- 
-
-
   } 
   weatherForecast();
+  saveSearch()
   })
   }
   weather();
 })
 
-
  
-    
+function saveSearch() {
+  var citySearch = document.getElementById('query').value;
+  localStorage.setItem('searchHistory', citySearch);
+
+
+}
 
 
 
