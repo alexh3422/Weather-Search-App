@@ -13,6 +13,9 @@ Just type the name of the city you'd like to get the weather for, into the searc
  Your city search history will also be saved so that you can easily pull up the weather data again
  Just simply click on the name of the city in the SEARCH HISTORY section to bring that city back up on the page. 
  
+ <h3> Disclaimer: </h3>
+The database we pull information from can occasionally get overloaded. Normally your search result should appear instantly, if it does not, please wait a couple of seconds for it to appear. 
+ 
  
  
  <h1> Main Section Screenshot </h1>
