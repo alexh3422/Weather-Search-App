@@ -15,5 +15,10 @@ Just type the name of the city you'd like to get the weather for, into the searc
  
  
  
- 
+ <h1> Main Section Screenshot </h1>
  <img width="1667" alt="Screenshot of weather app website" src="https://user-images.githubusercontent.com/115325648/211979021-c8ac5951-6364-4920-b809-97a3cd1c373d.png">
+ 
+ <h2>Search History Screenshot </h1>
+ 
+<img width="1677" alt="Screenshot of search history section" src="https://user-images.githubusercontent.com/115325648/211979588-d801bc5b-8deb-448a-b6c0-7d76cf43c5cf.png">
+
